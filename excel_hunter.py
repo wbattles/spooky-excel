@@ -1,7 +1,6 @@
 from pathlib import Path
 import sys
 import threading
-import sys
 import time
 from itertools import cycle
 
@@ -31,13 +30,11 @@ def trick_or_treat(dir_path, visited, excel_files):
             except PermissionError:
                 continue
             except Exception as e:
-                print(f"Error processing {item}: {e}", file=sys.stderr)
                 continue
                 
     except PermissionError:
         return
     except Exception as e:
-        print(f"Error accessing directory {dir_path}: {e}", file=sys.stderr)
         return
 
 def the_haunting():
